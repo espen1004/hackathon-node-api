@@ -17,9 +17,6 @@ app.get('/', function (req, res) {
 })
 
 //GET Date ENDPOINT
-app.get('/openapi', function (req, res) {
-  console.log(PORT);
-  console.log(process.env);
-
-  res.send(todaysDate)
+app.get('/openaikey', function (req, res) {
+  res.send(process.env.API_KEY);
 })
