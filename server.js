@@ -23,5 +23,8 @@ app.get('/', function (req, res) {
 //GET Date ENDPOINT
 app.get('/openaikey', function (req, res) {
   console.log(process.env.API_KEY);
-  res.send(process.env.API_KEY);
+  const apiKey = {
+    key: process.env.API_KEY
+  }
+  res.send(apiKey);
 })
