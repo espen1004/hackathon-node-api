@@ -1,4 +1,5 @@
-var express = require("express"); 
+var express = require("express");
+const cors = require('cors');
 var app = express();
 
 // Set the Server Port
@@ -11,7 +12,10 @@ var server = app.listen(PORT, function() {
 });
 
 
-//GET STATUS ENDPOINT
+app.use(cors({
+  origin: '*'
+}));
+
 app.get('/', function (req, res) {
   res.send('Our Server is Up and Running!')
 })
